@@ -1,9 +1,12 @@
 import pygame
+from scripts.obj import Obj
 
 class Scene:
 
     def __init__(self):
-        pygame.display.set_caption("BeeHoney")
+        
+        self.display = pygame.display.get_surface()
+        self.all_sprites = pygame.sprite.Group()
 
     def events(self, event):
         
@@ -12,8 +15,8 @@ class Scene:
                 pygame.quit()
 
     def draw(self):
-        pass
+        self.all_sprites.draw(self.display)
 
     def update(self):
-        pass
+        self.all_sprites.update()
 
