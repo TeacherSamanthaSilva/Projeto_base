@@ -1,14 +1,13 @@
 import pygame, sys
-from scripts.scene import Scene
+from scripts.menu import Menu, Game, GameOver
 
 class StartGame:
 
     def __init__(self):
         
         self.display = pygame.display.set_mode([1280,720])
-
-        self.current_scene = Scene()
-
+        self.current_scene = GameOver()
+    
     def run(self):
         
         while True:
