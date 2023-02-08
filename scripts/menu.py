@@ -17,6 +17,12 @@ class Game(Scene):
 
         self.bg = Obj("assets/game.png", [self.all_sprites])
     
+    def events(self, event):
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_a:
+                self.bg.rect.y += 1
+        return super().events(event)
+    
 
 class GameOver(Scene):
 
