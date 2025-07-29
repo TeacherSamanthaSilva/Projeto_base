@@ -1,4 +1,5 @@
 from scripts.startgame import StartGame
 
-game = StartGame()
-game.run()
+if __name__ == "__main__":
+    game = StartGame()
+    game.run()

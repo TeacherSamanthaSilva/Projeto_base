@@ -1,11 +1,18 @@
 import pygame, sys
-from scripts.menu import Menu, Game, GameOver
+from scripts.menu import Menu
+from scripts.game import Game
+from scripts.gameover import GameOver
+from scripts.settings import *
 
 class StartGame:
 
     def __init__(self):
+
+        pygame.init()
+        pygame.mixer.init()
+        pygame.font.init()
         
-        self.display = pygame.display.set_mode([1280,720])
+        self.display = pygame.display.set_mode([WIDTH,HEIGHT])
         self.scene = "menu"
         self.current_scene = Menu()
     
